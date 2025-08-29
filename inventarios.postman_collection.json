@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "8327c9d3-9449-497f-a9ea-b875fcb7d8d3",
+		"name": "inventarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17096546"
+	},
+	"item": [
+		{
+			"name": "productos/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/pruebas/productos/listar"
+			},
+			"response": []
+		},
+		{
+			"name": "inventario/listar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/pruebas/inventario/listar"
+			},
+			"response": []
+		},
+		{
+			"name": "/inventario/listarId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pruebas/inventario/listar?producto_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pruebas",
+						"inventario",
+						"listar"
+					],
+					"query": [
+						{
+							"key": "producto_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productos/crear",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\": \"Leche entera\",\r\n   \"codigo\": \"LEC-001\",\r\n   \"unidad\": \"lt\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/pruebas/productos/crear"
+			},
+			"response": []
+		},
+		{
+			"name": "inventario/entrada",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"producto_id\": 1,\r\n   \"cantidad\": 10,\r\n   \"vence_en\": \"2025-09-02\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/pruebas/inventario/entrada"
+			},
+			"response": []
+		},
+		{
+			"name": "inventario/salida",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"producto_id\": 1,\r\n   \"cantidad\": 3\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/pruebas/inventario/salida"
+			},
+			"response": []
+		}
+	]
+}

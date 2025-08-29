@@ -68,8 +68,8 @@ cp env .env
 
 Configura la base de datos en `.env`:
 ```DATABASE
-database.default.hostname = 127.0.0.1
-database.default.database = inventario_db
+database.default.hostname = localhost
+database.default.database = inventarios
 database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
